@@ -1,0 +1,9 @@
+{
+  "name": "scalajs-io",
+  "version": "7.4.0",
+  "private": true,
+  "dependencies": {
+    "source-map": "^0.5.6",
+    "transducers-js": "^0.4.174"
+  }
+}
