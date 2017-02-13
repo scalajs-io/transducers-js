@@ -1,13 +1,12 @@
 import org.scalajs.sbtplugin.ScalaJSPlugin
 import org.scalajs.sbtplugin.ScalaJSPlugin.autoImport._
 import sbt.Keys.{libraryDependencies, _}
-import sbt.Project.projectToRef
 import sbt._
 
 import scala.language.postfixOps
 
-val apiVersion = "0.3.0.3"
-val scalaJsIOVersion = "0.3.0.3"
+val apiVersion = "0.4.174"
+val scalaJsIOVersion = "0.3.0.4"
 val scalaJsVersion = "2.12.1"
 
 homepage := Some(url("https://github.com/scalajs.io/transducers-js"))
@@ -25,10 +24,10 @@ lazy val root = (project in file(".")).
     autoCompilerPlugins := true,
     scalaJSModuleKind := ModuleKind.CommonJSModule,
     libraryDependencies ++= Seq(
-	    "org.scala-lang" % "scala-reflect" % scalaJsVersion,
-	    "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
-	    "io.scalajs" %%% "nodejs" % scalaJsIOVersion
-  ))
+      "org.scala-lang" % "scala-reflect" % scalaJsVersion,
+      "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
+      "io.scalajs" %%% "nodejs" % scalaJsIOVersion
+    ))
 
 /////////////////////////////////////////////////////////////////////////////////
 //      Publishing

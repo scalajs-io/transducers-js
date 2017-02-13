@@ -1,24 +1,49 @@
 Transducers-js API for Scala.js
 ================================
-This is a Scala.js type-safe binding for [Transducers-js](https://www.npmjs.com/package/transducers-js)
+[transducers-js](https://www.npmjs.com/package/transducers-js) - A high performance Transducers implementation for JavaScript.
 
-<a name="build_requirements"></a>
-#### Build Requirements
+### Description
 
-* [ScalaJs.io v0.3.x](https://github.com/ldaniels528/scalajs.io)
+Transducers are composable algorithmic transformations. They are independent from the context of 
+their input and output sources and specify only the essence of the transformation in terms of an 
+individual element. Because transducers are decoupled from input or output sources, they can be 
+used in many different processes - collections, streams, channels, observables, etc. Transducers 
+compose directly, without awareness of input or creation of intermediate aggregates.
+
+### Build Requirements
+
+* [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
 * [SBT v0.13.13](http://www.scala-sbt.org/download.html)
 
-<a name="building_sdk"></a>
-#### Build/publish the SDK locally
+### Build/publish the SDK locally
 
 ```bash
  $ sbt clean publish-local
 ```
 
-<a name="resolvers"></a>
-#### Resolvers
+### Running the tests
 
-To add the Transducers-js binding to your project, add the following to your build.sbt:  
+Before running the tests the first time, you must ensure the npm packages are installed:
+
+```bash
+$ npm install
+```
+
+Then you can run the tests:
+
+```bash
+$ sbt test
+```
+
+### Artifacts and Resolvers
+
+To add the `TransducersJs` binding to your project, add the following to your build.sbt:  
+
+```sbt
+libraryDependencies += "io.scalajs.npm" %%% "transducers-js" % "0.4.174"
+```
+
+Optionally, you may add the Sonatype Repository resolver:
 
 ```   
 resolvers += Resolver.sonatypeRepo("releases") 
