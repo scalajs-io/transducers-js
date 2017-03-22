@@ -40,7 +40,7 @@ $ sbt test
 To add the `TransducersJs` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "transducers-js" % "0.4.174"
+libraryDependencies += "io.scalajs.npm" %%% "transducers-js" % "0.4.174-4"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
